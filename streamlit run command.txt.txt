@@ -1,1 +1,0 @@
-streamlit run "C:\Users\apoor\Desktop\CureITML\multipled_disease_predictor.py"
