@@ -546,7 +546,7 @@ if (selected == 'Medicine Recommendation'):
     # test 1
     symptoms = st.text_input('Enter your symptoms')
     if st.button('Medication Prediction Results'):
-        user_symptoms = [s.strip() for s in symptoms.split(',') ]
+        user_symptoms = [s.strip().lower() for s in symptoms.split(',') ]
         user_symptoms = [sym.strip("[]' ") for sym in user_symptoms ]
         predicted_disease = get_predicted_value(user_symptoms)
         desc,pre,med,diet,wrkout = helper(predicted_disease)
