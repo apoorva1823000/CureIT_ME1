@@ -26,25 +26,25 @@ st.set_page_config(
 
 
 #loading the saved models
-diabetes_model=pickle.load(open('C:/Users/apoor/Desktop/CureITML/models/diabetes_model.sav','rb'))
-parkinsons_model=pickle.load(open('C:/Users/apoor/Desktop/CureITML/models/parkinson_model.sav','rb'))
-cancer_model=pickle.load(open('C:/Users/apoor/Desktop/CureITML/models/cancer_model.sav','rb'))
-heart_model=pickle.load(open('C:/Users/apoor/Desktop/CureITML/models/heart_model.sav','rb'))
-medicine_predictor=pickle.load(open('C:/Users/apoor/Desktop/CureITML/models/svc.sav','rb'))
+diabetes_model=pickle.load(open('models/diabetes_model.sav','rb'))
+parkinsons_model=pickle.load(open('models/parkinson_model.sav','rb'))
+cancer_model=pickle.load(open('models/cancer_model.sav','rb'))
+heart_model=pickle.load(open('models/heart_model.sav','rb'))
+medicine_predictor=pickle.load(open('models/svc.sav','rb'))
 
 #loading saved scaler transformations
-diabetesScaler = pickle.load(open('C:/Users/apoor/Desktop/CureITML/scaler_files/scalerDiabetes.pkl','rb'))
-heartScaler = pickle.load(open('C:/Users/apoor/Desktop/CureITML/scaler_files/scalerHeart.pkl','rb'))
-parkinsonScaler = pickle.load(open('C:/Users/apoor/Desktop/CureITML/scaler_files/scalerParkinson.pkl','rb'))
-breastCancerScaler = pickle.load(open('C:/Users/apoor/Desktop/CureITML/scaler_files/scalerCancer.pkl','rb'))
+diabetesScaler = pickle.load(open('scaler_files/scalerDiabetes.pkl','rb'))
+heartScaler = pickle.load(open('scaler_files/scalerHeart.pkl','rb'))
+parkinsonScaler = pickle.load(open('scaler_files/scalerParkinson.pkl','rb'))
+breastCancerScaler = pickle.load(open('scaler_files/scalerCancer.pkl','rb'))
 
 #loading datasets for medicine predictor
-sys_des = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/symtoms_df.csv")
-precautions = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/precautions_df.csv")
-workout = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/workout_df.csv")
-description = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/description.csv")
-medications = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/medications.csv")
-diets = pd.read_csv("C:/Users/apoor/Desktop/CureITML/medicine_predictor/diets.csv")
+sys_des = pd.read_csv("medicine_predictor/symtoms_df.csv")
+precautions = pd.read_csv("medicine_predictor/precautions_df.csv")
+workout = pd.read_csv("medicine_predictor/workout_df.csv")
+description = pd.read_csv("medicine_predictor/description.csv")
+medications = pd.read_csv("medicine_predictor/medications.csv")
+diets = pd.read_csv("medicine_predictor/diets.csv")
 
 #sidebar for navigation
 with st.sidebar:
