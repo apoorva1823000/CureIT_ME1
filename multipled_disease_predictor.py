@@ -23,6 +23,37 @@ st.set_page_config(
         }
     )
 
+# CSS 
+custom_css = """
+<style>
+/* Body background with gradient */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(to right, #020024, #090979);
+}
+
+/* Sidebar background with gradient, curved edges, and elevation */
+[data-testid="stSidebar"] {
+    background: linear-gradient(to bottom, #020024, #090979);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top:5px;
+}
+
+/* Padding to prevent content from touching the edges */
+[data-testid="stSidebar"] > div:first-child {
+    padding: 10px;
+}
+
+[data-testid="stContainer"] {
+    background: linear-gradient(to bottom, #020024, #090979);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top:5px;
+}
+</style>
+"""
+
+st.markdown(custom_css, unsafe_allow_html=True)
 
 
 #loading the saved models
