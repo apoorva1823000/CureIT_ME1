@@ -24,31 +24,66 @@ st.set_page_config(
     )
 
 # CSS
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(to right, #020024, #090979);
-    }
-    .dataframe-table {
-        background: white;
-        color: black;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .stSidebar{
-        background: linear-gradient(to bottom, #020024, #090979);
-        border-radius: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-top:5px;
-    }
-    .stMarkdown {
-        margin-bottom: 10px !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     .stApp {
+#         background: linear-gradient(to right, #020024, #090979);
+#     }
+#     .dataframe-table {
+#         background: white;
+#         color: black;
+#         border-radius: 10px;
+#         padding: 10px;
+#     }
+#     .stSidebar{
+#         background: linear-gradient(to bottom, #020024, #090979);
+#         border-radius: 15px;
+#         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#         margin-top:5px;
+#     }
+#     .stMarkdown {
+#         margin-bottom: 10px !important;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+custom_css = """
+<style>
+/* App background with gradient */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(to right, #020024, #090979);
+}
+
+/* Sidebar background with gradient, curved edges, and elevation */
+[data-testid="stSidebar"] {
+    background: linear-gradient(to bottom, #020024, #090979);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5px;
+}
+
+/* Padding to prevent content from touching the edges */
+[data-testid="stSidebar"] > div:first-child {
+    padding: 10px;
+}
+
+/* Dataframe table styling */
+.dataframe-table {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Adjust margin for markdown content */
+.stMarkdown {
+    margin-bottom: 10px !important;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
 
 #loading the saved models
 diabetes_model=pickle.load(open('models/diabetes_model.sav','rb'))
