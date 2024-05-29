@@ -23,6 +23,26 @@ st.set_page_config(
         }
     )
 
+# CSS
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: linear-gradient(135deg, #10EDFB, #F206E5);
+    }
+    .dataframe-table {
+        background: white;
+        color: black;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .stMarkdown {
+        margin-bottom: 10px !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 #loading the saved models
 diabetes_model=pickle.load(open('models/diabetes_model.sav','rb'))
