@@ -28,13 +28,19 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(135deg, #10EDFB, #F206E5);
+        background: linear-gradient(to right, #020024, #090979);
     }
     .dataframe-table {
         background: white;
         color: black;
         border-radius: 10px;
         padding: 10px;
+    }
+    .stSideBar{
+        background: linear-gradient(to bottom, #020024, #090979);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-top:5px;
     }
     .stMarkdown {
         margin-bottom: 10px !important;
