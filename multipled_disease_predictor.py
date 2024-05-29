@@ -81,6 +81,26 @@ custom_css = """
 .stMarkdown {
     margin-bottom: 10px !important;
 }
+[data-testid="stSelectbox"] > div {
+    background: linear-gradient(to right, #020024, #090979);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+[data-testid="stSelectbox"] select {
+    background: linear-gradient(to right, #020024, #090979);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+[data-testid="stSelectbox"] option {
+    background: white;
+    color: black;
+}
 </style>
 """
 st.markdown(custom_css, unsafe_allow_html=True)
